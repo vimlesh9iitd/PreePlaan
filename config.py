@@ -6,7 +6,6 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     supabase_anon_key: str = ""
 
-    class Config:
-        env_file = ".env"
+    model_config = {"env_file": ".env"}
 
 settings = Settings()
